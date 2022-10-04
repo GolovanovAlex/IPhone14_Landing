@@ -39,37 +39,51 @@ body {
 }
 .menu__btn {
   display: none;
+  position: relative;
   width: 50px;
   height: 50px;
   order: 1;
-  cursor: pointer;
-  align-items: center;
   background-color: transparent;
+  cursor: pointer;
+  z-index: 100;
   span {
-    position: relative;
+    position: absolute;
+    left: 0;
     width: 50px;
     height: 4px;
     background-color: $color_link;
     border-radius: 8px;
-    &::before {
-      content: '';
-      position: absolute;
-      top: -15px;
-      width: 50px;
-      height: 4px;
-      background-color: $color_link;
-      border-radius: 8px;
+    transition: 0.3s;
+
+    &:nth-child(1) {
+      top: 0;
     }
-    &::after {
-      content: '';
-      position: absolute;
-      top: 15px;
-      width: 50px;
-      height: 4px;
-      background-color: $color_link;
-      border-radius: 8px;
+    &:nth-child(2) {
+      top: 20px;
+    }
+    &:nth-child(3) {
+      top: 20px;
+    }
+    &:nth-child(4) {
+      top: 40px;
     }
   }
+}
+.menu-open .menu__btn {
+  span {
+    transform: scale(0);
+
+    &:nth-child(2) {
+      transform: rotate(45deg);
+    }
+    &:nth-child(3) {
+      transform: rotate(-45deg);
+    }
+  }
+}
+.menu-open .menu {
+  transition: 0.3s;
+  transform: translateY(0);
 }
 
 // ---- ---- all ---- ---- //
@@ -95,10 +109,14 @@ body {
     padding-right: 30px;
   }
 }
+.logo {
+  z-index: 100;
+}
 .phone {
   text-align: right;
   flex-grow: 1;
   flex-basis: 0;
+  z-index: 100;
 }
 .headline {
   background-color: $color_bglight;
@@ -254,13 +272,9 @@ body {
       padding: 120px 80px;
       margin-top: 15px;
     }
-    &__title {
-    }
     &__input {
       margin: 0 auto;
       max-width: 600px;
-    }
-    &__btn {
     }
     &__img {
       width: 100%;
@@ -289,7 +303,24 @@ body {
     display: flex;
   }
   .menu {
-    display: none;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: $color_main;
+    transform: translateY(-110%);
+    transition: 0.3s;
+    font-size: 40px;
+
+    &__item {
+      padding-right: 0;
+      margin-bottom: 60px;
+    }
   }
   .header__phone {
     margin: 0 20px;
