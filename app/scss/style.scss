@@ -36,6 +36,7 @@ body {
   background-color: $color_accent;
   border-radius: 30px;
   padding: 22px 118px 19px;
+  transition: 0.3s;
 }
 .menu__btn {
   display: none;
@@ -108,11 +109,20 @@ body {
   &__item {
     padding-right: 30px;
   }
+  &__link {
+    &:hover {
+      text-decoration: underline $color_accent;
+    }
+  }
 }
 .logo {
+  cursor: pointer;
   z-index: 100;
 }
-.phone {
+.phone:hover {
+  text-decoration: underline $color_accent;
+}
+.header__phone-box {
   text-align: right;
   flex-grow: 1;
   flex-basis: 0;
@@ -142,6 +152,12 @@ body {
 .headline-img {
   max-width: 100%;
   margin-bottom: 25px;
+}
+.headline-btn:hover {
+  color: $color_accent;
+  background-color: transparent;
+  border: 3px solid $color_accent;
+  transform: scale(1.05);
 }
 .new {
   padding: 90px 0 150px;
@@ -235,6 +251,11 @@ body {
     color: $color_accent;
     padding: 16px 81px;
     margin: 0 auto;
+    &:hover {
+      color: $color_lightmain;
+      background-color: $color_accent;
+      transform: scale(1.1);
+    }
   }
   &__img {
     width: 580px;
@@ -253,6 +274,9 @@ body {
   &__link {
     flex-grow: 1;
     flex-basis: 0;
+    &:hover {
+      text-decoration: underline $color_accent;
+    }
   }
   &__phone {
     font-size: 24px;
@@ -297,7 +321,6 @@ body {
     }
   }
 }
-
 @media (max-width: 870px) {
   .menu__btn {
     display: flex;
@@ -319,15 +342,17 @@ body {
 
     &__item {
       padding-right: 0;
-      margin-bottom: 60px;
+      margin-bottom: 70px;
+    }
+    &__link {
+      padding: 15px;
     }
   }
-  .header__phone {
+  .header__phone-box {
     margin: 0 20px;
     text-align: center;
   }
 }
-
 @media (max-width: 800px) {
   .new {
     padding: 50px 0 100px;
@@ -379,7 +404,7 @@ body {
   }
 }
 @media (max-width: 400px) {
-  .header__phone {
+  .header__phone-box {
     display: none;
   }
   .title__h1 {
@@ -398,8 +423,4 @@ body {
   .contacts__form {
     padding: 50px 20px;
   }
-}
-@media (max-width: 360px) {
-}
-@media (max-width: 320px) {
 }
