@@ -1,6 +1,4 @@
 // ---- ---- reset ---- ---- //
-@import 'slick.scss';
-@import 'jquery.fancybox.scss';
 @import 'normalize.scss';
 @import 'myreset.scss';
 
@@ -134,7 +132,6 @@ body {
     margin-bottom: 20px;
   }
 }
-
 .contacts {
   &__inner {
     display: flex;
