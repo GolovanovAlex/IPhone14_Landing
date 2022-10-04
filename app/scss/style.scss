@@ -23,11 +23,21 @@ body {
   line-height: 18px;
   color: $color_main;
 }
-
 .container {
   max-width: 1200px;
   padding: 0 15px;
   margin: 0 auto;
+}
+.btn {
+  display: inline-block;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 29px;
+  text-transform: uppercase;
+  color: $color_lightmain;
+  background-color: $color_accent;
+  border-radius: 30px;
+  padding: 22px 118px 19px;
 }
 
 // ---- ---- all ---- ---- //
@@ -52,26 +62,16 @@ body {
   &__item {
     padding-right: 30px;
   }
-  &__link {
-  }
-}
-.logo {
-  &__img {
-  }
 }
 .phone {
   text-align: right;
   flex-grow: 1;
   flex-basis: 0;
 }
-.main {
-}
 .headline {
   background-color: $color_bglight;
   text-align: center;
   padding: 70px 0 40px;
-}
-.container {
 }
 .title {
   text-transform: uppercase;
@@ -81,10 +81,6 @@ body {
   font-weight: 700;
   line-height: 77px;
   color: $color_accent;
-
-  &__h1 {
-  }
-
   &__h2 {
     margin: 0 0 50px;
     font-size: 32px;
@@ -96,27 +92,11 @@ body {
 .headline-img {
   margin-bottom: 25px;
 }
-.btn {
-  display: inline-block;
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 29px;
-  text-transform: uppercase;
-  color: $color_lightmain;
-  background-color: $color_accent;
-  border-radius: 30px;
-  padding: 22px 118px 19px;
-}
-.headline-btn {
-}
-
 .new {
   padding: 90px 0 150px;
   &__box {
     display: flex;
     align-items: center;
-  }
-  &__info {
   }
   &__text {
     max-width: 560px;
@@ -133,7 +113,6 @@ body {
     margin-left: 190px;
   }
 }
-
 .color {
   padding-bottom: 150px;
   &_phone {
@@ -142,8 +121,6 @@ body {
       font-weight: 700;
       line-height: 26px;
       margin: 0 0 10px;
-    }
-    p {
     }
   }
   &__phones {
@@ -215,7 +192,7 @@ body {
 .footer {
   background-color: $color_main;
   color: $color_link;
-  padding: 51px 0;
+  padding: 50px 0;
   &__inner {
     display: flex;
     justify-content: space-between;
@@ -224,10 +201,6 @@ body {
   &__link {
     flex-grow: 1;
     flex-basis: 0;
-  }
-  &__ {
-    &_img {
-    }
   }
   &__phone {
     font-size: 24px;
