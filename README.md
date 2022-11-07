@@ -1,4 +1,4 @@
-# IPhone14 Simple landing
+# IPhone14 simple landing
 
 ### Use Skills
 
